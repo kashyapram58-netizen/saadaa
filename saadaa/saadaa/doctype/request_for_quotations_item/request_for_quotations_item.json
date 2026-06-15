@@ -159,8 +159,7 @@
    "label": "Stock UOM",
    "options": "UOM",
    "print_hide": 1,
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "col_break2",
@@ -183,8 +182,7 @@
    "fieldtype": "Float",
    "label": "UOM Conversion Factor",
    "print_hide": 1,
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "stock_qty",
@@ -218,7 +216,7 @@
    "fieldname": "material_request",
    "fieldtype": "Link",
    "label": "Material Request",
-   "options": "Material Request",
+   "options": "Material Requisition",
    "print_hide": 1,
    "read_only": 1
   },
@@ -261,8 +259,8 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-06-14 13:37:43.297118",
- "modified_by": "Administrator",
+ "modified": "2026-06-15 21:53:44.055181",
+ "modified_by": "kashyap.ram58@gmail.com",
  "module": "Saadaa",
  "name": "Request for Quotations Item",
  "naming_rule": "Random",

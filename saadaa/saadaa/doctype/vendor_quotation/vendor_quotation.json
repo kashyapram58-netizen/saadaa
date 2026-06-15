@@ -118,7 +118,8 @@
   "column_break_57",
   "opportunity",
   "connections_tab",
-  "material_requisition"
+  "material_requisition",
+  "request_for_quotations"
  ],
  "fields": [
   {
@@ -938,6 +939,12 @@
    "label": "Material Requisition",
    "options": "Material Requisition",
    "search_index": 1
+  },
+  {
+   "fieldname": "request_for_quotations",
+   "fieldtype": "Link",
+   "label": "Request For Quotaion",
+   "options": "Request For Quotations"
   }
  ],
  "grid_page_length": 50,
@@ -945,8 +952,8 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-06-15 05:57:38.419814",
- "modified_by": "kashyap@gmail.com",
+ "modified": "2026-06-15 22:51:00.599036",
+ "modified_by": "kashyap.ram58@gmail.com",
  "module": "Saadaa",
  "name": "Vendor Quotation",
  "naming_rule": "By \"Naming Series\" field",

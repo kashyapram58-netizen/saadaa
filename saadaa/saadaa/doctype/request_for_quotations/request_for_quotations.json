@@ -42,7 +42,8 @@
   "letter_head",
   "more_info",
   "opportunity",
-  "material_requisition"
+  "material_requisition",
+  "amended_from"
  ],
  "fields": [
   {
@@ -329,15 +330,30 @@
    "fieldtype": "Link",
    "label": "Material Request",
    "options": "Material Requisition"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Request For Quotations",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "icon": "fa fa-shopping-cart",
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2026-06-15 07:12:54.953414",
- "modified_by": "Administrator",
+ "links": [
+  {
+   "link_doctype": "Vendor Quotation",
+   "link_fieldname": "request_for_quotations"
+  }
+ ],
+ "modified": "2026-06-15 22:52:15.190070",
+ "modified_by": "kashyap.ram58@gmail.com",
  "module": "Saadaa",
  "name": "Request For Quotations",
  "naming_rule": "By \"Naming Series\" field",
