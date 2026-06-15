@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class RequestforQuotations(Document):
+class RequestForQuotations(Document):
 	pass
