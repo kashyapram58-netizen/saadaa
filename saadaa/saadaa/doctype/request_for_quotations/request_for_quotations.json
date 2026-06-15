@@ -16,8 +16,6 @@
   "transaction_date",
   "schedule_date",
   "status",
-  "has_unit_price_items",
-  "amended_from",
   "suppliers_section",
   "suppliers",
   "items_section",
@@ -44,7 +42,7 @@
   "letter_head",
   "more_info",
   "opportunity",
-  "amended_from"
+  "material_requisition"
  ],
  "fields": [
   {
@@ -129,25 +127,7 @@
    "options": "\nDraft\nSubmitted\nCancelled",
    "print_hide": 1,
    "read_only": 1,
-   "reqd": 1,
    "search_index": 1
-  },
-  {
-   "default": "0",
-   "fieldname": "has_unit_price_items",
-   "fieldtype": "Check",
-   "hidden": 1,
-   "label": "Has Unit Price Items",
-   "no_copy": 1
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Request for Quotation",
-   "print_hide": 1,
-   "read_only": 1
   },
   {
    "fieldname": "suppliers_section",
@@ -345,13 +325,10 @@
    "read_only": 1
   },
   {
-   "fieldname": "amended_from",
+   "fieldname": "material_requisition",
    "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Request for Quotation",
-   "print_hide": 1,
-   "read_only": 1
+   "label": "Material Request",
+   "options": "Material Requisition"
   }
  ],
  "grid_page_length": 50,
@@ -359,10 +336,10 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-06-14 13:37:43.582981",
+ "modified": "2026-06-15 07:12:54.953414",
  "modified_by": "Administrator",
  "module": "Saadaa",
- "name": "Request for Quotations",
+ "name": "Request For Quotations",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [

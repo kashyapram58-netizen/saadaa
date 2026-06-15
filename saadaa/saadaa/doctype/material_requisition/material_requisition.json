@@ -256,7 +256,8 @@
   {
    "fieldname": "connections_tab",
    "fieldtype": "Tab Break",
-   "label": "Connections"
+   "label": "Connections",
+   "show_dashboard": 1
   },
   {
    "fieldname": "amended_from",
@@ -272,8 +273,17 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2026-06-14 11:59:38.927028",
+ "links": [
+  {
+   "link_doctype": "Request For Quotations",
+   "link_fieldname": "material_requisition"
+  },
+  {
+   "link_doctype": "Purchase Orders",
+   "link_fieldname": "material_requisition"
+  }
+ ],
+ "modified": "2026-06-15 07:19:30.958730",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Material Requisition",

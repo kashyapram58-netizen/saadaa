@@ -162,7 +162,8 @@
   "party_account_currency",
   "inter_company_order_reference",
   "is_old_subcontracting_flow",
-  "connections_tab"
+  "connections_tab",
+  "material_requisition"
  ],
  "fields": [
   {
@@ -1303,13 +1304,20 @@
    "fieldtype": "Tab Break",
    "label": "Connections",
    "show_dashboard": 1
+  },
+  {
+   "fieldname": "material_requisition",
+   "fieldtype": "Link",
+   "label": "Material Requisition",
+   "options": "Material Requisition",
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "icon": "fa fa-file-text",
  "is_submittable": 1,
  "links": [],
- "modified": "2026-06-14 15:27:56.964475",
+ "modified": "2026-06-15 07:18:54.690417",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Purchase Orders",
