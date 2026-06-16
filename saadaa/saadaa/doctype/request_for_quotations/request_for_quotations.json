@@ -329,7 +329,8 @@
    "fieldname": "material_requisition",
    "fieldtype": "Link",
    "label": "Material Request",
-   "options": "Material Requisition"
+   "options": "Material Requisition",
+   "search_index": 1
   },
   {
    "fieldname": "amended_from",
@@ -346,14 +347,9 @@
  "icon": "fa fa-shopping-cart",
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [
-  {
-   "link_doctype": "Vendor Quotation",
-   "link_fieldname": "request_for_quotations"
-  }
- ],
- "modified": "2026-06-15 22:52:15.190070",
- "modified_by": "kashyap.ram58@gmail.com",
+ "links": [],
+ "modified": "2026-06-16 22:35:52.150669",
+ "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Request For Quotations",
  "naming_rule": "By \"Naming Series\" field",
