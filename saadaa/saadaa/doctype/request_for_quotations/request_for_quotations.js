@@ -53,30 +53,31 @@ frappe.ui.form.on('Request For Quotations', {
             // FIX: Allow "Vendor Quotation" creation on saved documents (Draft or Submitted)
             frm.add_custom_button(__('Vendor Quotation'), function () {
                 // Pre-load the target Doctype structure to receive mapped child rows cleanly
+                // Inside your "Vendor Quotation" button logic in RFQ:
                 frappe.model.with_doctype('Vendor Quotation', function () {
                     let target_doc = frappe.model.make_new_doc_and_get_name('Vendor Quotation');
                     let new_vq = locals['Vendor Quotation'][target_doc];
 
-                    // Map parent fields
                     new_vq.request_for_quotation = frm.doc.name;
                     new_vq.company = frm.doc.company;
                     new_vq.material_requisition = frm.doc.material_requisition;
 
-                    // Map Child Table Items natively
                     if (frm.doc.items && frm.doc.items.length > 0) {
-                        // Clear auto-generated empty lines in the target document
-                        new_vq.items = [];
-
                         frm.doc.items.forEach(rfq_item => {
+                            // Use frappe.model.add_child and immediately populate 
+                            // without triggering auto-refresh logic
                             let child_row = frappe.model.add_child(new_vq, 'Vendor Quotation Item', 'items');
-                            child_row.item_code = rfq_item.item_code;
-                            child_row.uom = rfq_item.uom;
-                            child_row.qty = rfq_item.qty || rfq_item.quantity || 0;
-                            child_row.quantity = rfq_item.qty || rfq_item.quantity || 0;
+
+                            // Set fields directly. Use the 'true' parameter in set_value if possible, 
+                            // but for initial child creation, simple assignment is safer.
+                            frappe.model.set_value(child_row.doctype, child_row.name, 'item_code', rfq_item.item_code);
+                            frappe.model.set_value(child_row.doctype, child_row.name, 'uom', rfq_item.uom);
+                            frappe.model.set_value(child_row.doctype, child_row.name, 'qty', rfq_item.qty || rfq_item.quantity);
                         });
                     }
 
-                    // Route user to the pre-populated document view screen
+                    // Trigger a refresh only once at the very end
+                    cur_frm.refresh_fields('items');
                     frappe.set_route('Form', 'Vendor Quotation', target_doc);
                 });
             }, __('Create'));

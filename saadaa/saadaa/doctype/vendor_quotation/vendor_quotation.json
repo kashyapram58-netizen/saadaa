@@ -201,7 +201,6 @@
    "options": "\nDraft\nSubmitted\nStopped\nCancelled\nExpired",
    "print_hide": 1,
    "read_only": 1,
-   "reqd": 1,
    "search_index": 1
   },
   {
@@ -944,7 +943,8 @@
    "fieldname": "request_for_quotations",
    "fieldtype": "Link",
    "label": "Request For Quotaion",
-   "options": "Request For Quotations"
+   "options": "Request For Quotations",
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
@@ -952,8 +952,8 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-06-15 22:51:00.599036",
- "modified_by": "kashyap.ram58@gmail.com",
+ "modified": "2026-06-16 20:51:40.188451",
+ "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Vendor Quotation",
  "naming_rule": "By \"Naming Series\" field",

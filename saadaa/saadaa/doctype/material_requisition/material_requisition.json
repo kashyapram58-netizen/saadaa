@@ -281,9 +281,13 @@
   {
    "link_doctype": "Purchase Orders",
    "link_fieldname": "material_requisition"
+  },
+  {
+   "link_doctype": "Vendor Quotation",
+   "link_fieldname": "material_requisition"
   }
  ],
- "modified": "2026-06-15 07:19:30.958730",
+ "modified": "2026-06-16 22:12:51.089105",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Material Requisition",
