@@ -43,27 +43,3 @@ def send_supplier_emails(rfq_name):
             except Exception as e:
                 frappe.log_error(title=_("RFQ Email Send Failure"), message=frappe.get_traceback())
                 frappe.throw(_("Failed to send email to {0}. Check Error Logs for details.").format(supplier.supplier))
-
-
-# @frappe.whitelist()
-# def make_vendor_quotation(source_name):
-#     # This officially maps child tables from the RFQ to Vendor Quotation cleanly
-#     doclist = get_mapped_doc("Request For Quotations", source_name, {
-#         "Request For Quotations": {
-#             "doctype": "Vendor Quotation",
-#             "field_map": {
-#                 "name": "request_for_quotation",
-#                 "material_requisition": "material_requisition",
-#                 "company": "company"
-#             }
-#         },
-#         "Request For Quotations Item": {
-#             "doctype": "Vendor Quotation Item", # <-- Replace with your exact Vendor Quotation Child Table DocType name if different
-#             "field_map": {
-#                 "item_code": "item_code",
-#                 "uom": "uom",
-#                 "qty": "qty"
-#             }
-#         }
-#     })
-#     return doclist                
