@@ -45,7 +45,8 @@
   "column_break_35",
   "work_order",
   "connections_tab",
-  "amended_from"
+  "amended_from",
+  "purchase_orders"
  ],
  "fields": [
   {
@@ -268,6 +269,12 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "purchase_orders",
+   "fieldtype": "Link",
+   "label": "Purchase Order",
+   "options": "Purchase Orders"
   }
  ],
  "grid_page_length": 50,
@@ -287,7 +294,7 @@
    "link_fieldname": "material_requisition"
   }
  ],
- "modified": "2026-06-16 22:12:51.089105",
+ "modified": "2026-06-17 11:22:43.396798",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Material Requisition",

@@ -15,7 +15,6 @@
   "supplier_name",
   "company",
   "column_break1",
-  "status",
   "transaction_date",
   "valid_till",
   "quotation_number",
@@ -119,7 +118,8 @@
   "opportunity",
   "connections_tab",
   "material_requisition",
-  "request_for_quotations"
+  "request_for_quotations",
+  "purchase_orders"
  ],
  "fields": [
   {
@@ -190,18 +190,6 @@
    "oldfieldtype": "Column Break",
    "print_width": "50%",
    "width": "50%"
-  },
-  {
-   "fieldname": "status",
-   "fieldtype": "Select",
-   "label": "Status",
-   "no_copy": 1,
-   "oldfieldname": "status",
-   "oldfieldtype": "Select",
-   "options": "\nDraft\nSubmitted\nStopped\nCancelled\nExpired",
-   "print_hide": 1,
-   "read_only": 1,
-   "search_index": 1
   },
   {
    "default": "Today",
@@ -945,14 +933,25 @@
    "label": "Request For Quotaion",
    "options": "Request For Quotations",
    "search_index": 1
+  },
+  {
+   "fieldname": "purchase_orders",
+   "fieldtype": "Link",
+   "label": "Purchase Orders",
+   "options": "Purchase Orders"
   }
  ],
  "grid_page_length": 50,
  "icon": "fa fa-shopping-cart",
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2026-06-16 20:51:40.188451",
+ "links": [
+  {
+   "link_doctype": "Purchase Orders",
+   "link_fieldname": "vendor_quotation"
+  }
+ ],
+ "modified": "2026-06-17 14:01:07.588164",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Vendor Quotation",
@@ -1014,7 +1013,7 @@
   }
  ],
  "row_format": "Dynamic",
- "search_fields": "status, transaction_date, supplier,grand_total",
+ "search_fields": "transaction_date, supplier,grand_total",
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

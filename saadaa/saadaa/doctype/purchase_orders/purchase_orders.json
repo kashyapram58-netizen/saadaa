@@ -163,7 +163,8 @@
   "inter_company_order_reference",
   "is_old_subcontracting_flow",
   "connections_tab",
-  "material_requisition"
+  "material_requisition",
+  "vendor_quotation"
  ],
  "fields": [
   {
@@ -322,7 +323,7 @@
    "no_copy": 1,
    "oldfieldname": "amended_from",
    "oldfieldtype": "Data",
-   "options": "Purchase Order",
+   "options": "Purchase Orders",
    "print_hide": 1,
    "read_only": 1
   },
@@ -1105,6 +1106,7 @@
    "label": "Order Status"
   },
   {
+   "allow_on_submit": 1,
    "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
@@ -1113,7 +1115,7 @@
    "no_copy": 1,
    "oldfieldname": "status",
    "oldfieldtype": "Select",
-   "options": "\nDraft\nOn Hold\nTo Receive and Bill\nTo Bill\nTo Receive\nCompleted\nCancelled\nClosed\nDelivered",
+   "options": "Draft\nAudited\nSubmitted\nApproved\nRejected\nCancelled",
    "print_hide": 1,
    "read_only": 1,
    "reqd": 1,
@@ -1311,17 +1313,33 @@
    "label": "Material Requisition",
    "options": "Material Requisition",
    "search_index": 1
+  },
+  {
+   "fieldname": "vendor_quotation",
+   "fieldtype": "Link",
+   "label": "Vendor Quotation",
+   "options": "Vendor Quotation",
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "icon": "fa fa-file-text",
  "is_submittable": 1,
- "links": [],
- "modified": "2026-06-15 07:18:54.690417",
+ "links": [
+  {
+   "link_doctype": "Material Requisition",
+   "link_fieldname": "purchase_orders"
+  },
+  {
+   "link_doctype": "Vendor Quotation",
+   "link_fieldname": "purchase_orders"
+  }
+ ],
+ "modified": "2026-06-17 14:31:47.232654",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Purchase Orders",
- "naming_rule": "Expression",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
