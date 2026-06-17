@@ -43,7 +43,8 @@
   "more_info",
   "opportunity",
   "material_requisition",
-  "amended_from"
+  "amended_from",
+  "purchase_orders"
  ],
  "fields": [
   {
@@ -341,6 +342,12 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "purchase_orders",
+   "fieldtype": "Link",
+   "label": "Purchase Orders",
+   "options": "Purchase Orders"
   }
  ],
  "grid_page_length": 50,
@@ -348,7 +355,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-06-16 22:35:52.150669",
+ "modified": "2026-06-17 11:25:35.589332",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Request For Quotations",
