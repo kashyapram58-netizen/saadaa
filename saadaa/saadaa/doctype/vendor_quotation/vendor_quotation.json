@@ -15,6 +15,7 @@
   "supplier_name",
   "company",
   "column_break1",
+  "vq_status",
   "transaction_date",
   "valid_till",
   "quotation_number",
@@ -118,8 +119,7 @@
   "opportunity",
   "connections_tab",
   "material_requisition",
-  "request_for_quotations",
-  "purchase_orders"
+  "request_for_quotations"
  ],
  "fields": [
   {
@@ -921,24 +921,35 @@
    "show_dashboard": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "material_requisition",
    "fieldtype": "Link",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
    "label": "Material Requisition",
    "options": "Material Requisition",
    "search_index": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "request_for_quotations",
    "fieldtype": "Link",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
    "label": "Request For Quotaion",
    "options": "Request For Quotations",
    "search_index": 1
   },
   {
-   "fieldname": "purchase_orders",
-   "fieldtype": "Link",
-   "label": "Purchase Orders",
-   "options": "Purchase Orders"
+   "default": "Draft",
+   "fieldname": "vq_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "oldfieldname": "transaction_date",
+   "oldfieldtype": "Date",
+   "options": "Draft\nSubmitted\nRejected\nApproved\nRejected\nCancelled",
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
@@ -951,8 +962,8 @@
    "link_fieldname": "vendor_quotation"
   }
  ],
- "modified": "2026-06-17 14:01:07.588164",
- "modified_by": "Administrator",
+ "modified": "2026-06-17 23:30:05.128385",
+ "modified_by": "admin@gmail.com",
  "module": "Saadaa",
  "name": "Vendor Quotation",
  "naming_rule": "By \"Naming Series\" field",

@@ -48,7 +48,7 @@ frappe.ui.form.on('Request For Quotations', {
         }
 
         // --- 3. OPERATIONAL MENUS (Show as long as the document has been saved at least once) ---
-        if (!frm.is_new()) {
+        if (frm.doc.docstatus === 1) {
 
             // FIX: Allow "Vendor Quotation" creation on saved documents (Draft or Submitted)
             frm.add_custom_button(__('Vendor Quotation'), function () {
