@@ -3,8 +3,8 @@
 
 frappe.ui.form.on('Material Requisition', {
     refresh: function (frm) {
-        if (!frm.is_new() && !frm.is_dirty()) {
-            // Add Create menu
+        // Only show "Create" buttons if the document is SUBMITTED (docstatus == 1)
+        if (frm.doc.docstatus === 1) {
             frm.add_custom_button(__('Request for Quotations'), function () {
                 frappe.new_doc('Request For Quotations', {
                     'material_requisition': frm.doc.name
@@ -19,16 +19,14 @@ frappe.ui.form.on('Material Requisition', {
         }
     },
 
-    // --- NEW: Date Automation Requirements ---
+    // --- Date Automation ---
     onload: function (frm) {
-        // Auto-set Transaction Date on new forms
         if (frm.is_new()) {
             frm.set_value('transaction_date', frappe.datetime.get_today());
         }
     },
 
     required_by: function (frm) {
-        // Auto-populate 'required_by_date' in the items table when header changes
         if (frm.doc.required_by) {
             frm.doc.items.forEach(function (row) {
                 frappe.model.set_value(row.doctype, row.name, 'required_by_date', frm.doc.required_by);

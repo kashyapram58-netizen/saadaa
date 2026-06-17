@@ -119,8 +119,7 @@
   "opportunity",
   "connections_tab",
   "material_requisition",
-  "request_for_quotations",
-  "purchase_orders"
+  "request_for_quotations"
  ],
  "fields": [
   {
@@ -922,24 +921,23 @@
    "show_dashboard": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "material_requisition",
    "fieldtype": "Link",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
    "label": "Material Requisition",
    "options": "Material Requisition",
    "search_index": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "request_for_quotations",
    "fieldtype": "Link",
+   "hidden": 1,
+   "ignore_user_permissions": 1,
    "label": "Request For Quotaion",
    "options": "Request For Quotations",
-   "search_index": 1
-  },
-  {
-   "fieldname": "purchase_orders",
-   "fieldtype": "Link",
-   "label": "Purchase Orders",
-   "options": "Purchase Orders",
    "search_index": 1
   },
   {
@@ -964,8 +962,8 @@
    "link_fieldname": "vendor_quotation"
   }
  ],
- "modified": "2026-06-17 16:17:05.936551",
- "modified_by": "Administrator",
+ "modified": "2026-06-17 23:30:05.128385",
+ "modified_by": "admin@gmail.com",
  "module": "Saadaa",
  "name": "Vendor Quotation",
  "naming_rule": "By \"Naming Series\" field",

@@ -47,7 +47,7 @@ def make_purchase_order(source_name, target_doc=None):
             "Vendor Quotation": {
                 "doctype": "Purchase Orders",
                 "field_map": {
-                    "name": "vendor_quotation_reference",
+                    "name": "vendor_quotation",
                     "supplier": "supplier",
                     "company": "company"
                 }

@@ -11,6 +11,8 @@
  "field_order": [
   "supplier_section",
   "title",
+  "vendor_quotation",
+  "material_requisition",
   "naming_series",
   "supplier",
   "supplier_name",
@@ -162,9 +164,7 @@
   "party_account_currency",
   "inter_company_order_reference",
   "is_old_subcontracting_flow",
-  "connections_tab",
-  "material_requisition",
-  "vendor_quotation"
+  "connections_tab"
  ],
  "fields": [
   {
@@ -1308,17 +1308,26 @@
    "show_dashboard": 1
   },
   {
-   "fieldname": "material_requisition",
+   "allow_on_submit": 1,
+   "default": "{supplier_name}",
+   "fieldname": "vendor_quotation",
    "fieldtype": "Link",
-   "label": "Material Requisition",
-   "options": "Material Requisition",
+   "hidden": 1,
+   "label": "Vendor Quotation",
+   "no_copy": 1,
+   "options": "Vendor Quotation",
+   "print_hide": 1,
    "search_index": 1
   },
   {
-   "fieldname": "vendor_quotation",
+   "allow_on_submit": 1,
+   "fieldname": "material_requisition",
    "fieldtype": "Link",
-   "label": "Vendor Quotation",
-   "options": "Vendor Quotation",
+   "hidden": 1,
+   "label": "Material Request",
+   "no_copy": 1,
+   "options": "Material Requisition",
+   "print_hide": 1,
    "search_index": 1
   }
  ],
@@ -1329,14 +1338,10 @@
   {
    "link_doctype": "Material Requisition",
    "link_fieldname": "purchase_orders"
-  },
-  {
-   "link_doctype": "Vendor Quotation",
-   "link_fieldname": "purchase_orders"
   }
  ],
- "modified": "2026-06-17 14:31:47.232654",
- "modified_by": "Administrator",
+ "modified": "2026-06-18 00:23:43.363039",
+ "modified_by": "admin@gmail.com",
  "module": "Saadaa",
  "name": "Purchase Orders",
  "naming_rule": "Expression (old style)",
