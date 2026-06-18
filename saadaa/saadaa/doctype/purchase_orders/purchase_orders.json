@@ -12,6 +12,7 @@
   "supplier_section",
   "title",
   "vendor_quotation",
+  "request_for_quotations",
   "material_requisition",
   "naming_series",
   "supplier",
@@ -1309,7 +1310,6 @@
   },
   {
    "allow_on_submit": 1,
-   "default": "{supplier_name}",
    "fieldname": "vendor_quotation",
    "fieldtype": "Link",
    "hidden": 1,
@@ -1323,10 +1323,20 @@
    "allow_on_submit": 1,
    "fieldname": "material_requisition",
    "fieldtype": "Link",
-   "hidden": 1,
    "label": "Material Request",
    "no_copy": 1,
    "options": "Material Requisition",
+   "print_hide": 1,
+   "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "request_for_quotations",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Request For Quotations",
+   "no_copy": 1,
+   "options": "Request For Quotations",
    "print_hide": 1,
    "search_index": 1
   }
@@ -1338,10 +1348,18 @@
   {
    "link_doctype": "Material Requisition",
    "link_fieldname": "purchase_orders"
+  },
+  {
+   "link_doctype": "Request For Quotations",
+   "link_fieldname": "purchase_orders"
+  },
+  {
+   "link_doctype": "Vendor Quotation",
+   "link_fieldname": "purchase_orders"
   }
  ],
- "modified": "2026-06-18 00:23:43.363039",
- "modified_by": "admin@gmail.com",
+ "modified": "2026-06-18 22:04:03.288078",
+ "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Purchase Orders",
  "naming_rule": "Expression (old style)",

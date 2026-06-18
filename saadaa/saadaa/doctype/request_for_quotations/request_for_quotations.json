@@ -42,8 +42,9 @@
   "letter_head",
   "more_info",
   "opportunity",
-  "material_requisition",
   "amended_from",
+  "connections_tab",
+  "material_requisition",
   "purchase_orders"
  ],
  "fields": [
@@ -347,15 +348,26 @@
    "fieldname": "purchase_orders",
    "fieldtype": "Link",
    "label": "Purchase Orders",
-   "options": "Purchase Orders"
+   "options": "Purchase Orders",
+   "search_index": 1
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections"
   }
  ],
  "grid_page_length": 50,
  "icon": "fa fa-shopping-cart",
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2026-06-17 11:25:35.589332",
+ "links": [
+  {
+   "link_doctype": "Material Requisition",
+   "link_fieldname": "request_for_quotations"
+  }
+ ],
+ "modified": "2026-06-18 23:25:33.906429",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Request For Quotations",

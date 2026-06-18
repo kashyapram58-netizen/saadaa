@@ -1,0 +1,110 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"brCLrv5Y0I\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Saadaa</b></span>\",\"col\":12}},{\"id\":\"rFAqyiLmx3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request Saadaa\",\"col\":3}},{\"id\":\"absd1JW6P6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"RFQs Saadaa\",\"col\":3}},{\"id\":\"1L5Y6-ibSb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vendor Quotation\",\"col\":3}},{\"id\":\"AlPy9x9zlG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Orders Saadaa\",\"col\":3}},{\"id\":\"JB0mUdRw44\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b></b></span>\",\"col\":12}},{\"id\":\"Mnkga5GNQp\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kDr2pyA11F\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Website\",\"col\":12}}]",
+ "creation": "2026-06-18 23:58:53.864639",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "color-energy-points",
+ "idx": 0,
+ "indicator_color": "",
+ "is_hidden": 0,
+ "label": "Saadaa",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Material Requisition",
+   "link_count": 0,
+   "link_to": "Material Requisition",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Request For Quotations",
+   "link_count": 0,
+   "link_to": "Request for Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vendor Quotation",
+   "link_count": 0,
+   "link_to": "Supplier Quotation",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Orders",
+   "link_count": 0,
+   "link_to": "Purchase Order",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-19 00:45:45.040851",
+ "modified_by": "Administrator",
+ "module": "Saadaa",
+ "name": "Saadaa",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Vendor Quotation",
+   "link_to": "Vendor Quotation",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Material Request Saadaa",
+   "link_to": "Material Requisition",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Purchase Orders Saadaa",
+   "link_to": "Purchase Orders",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "RFQs Saadaa",
+   "link_to": "Request For Quotations",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Saadaa"
+}
