@@ -40,6 +40,12 @@ class VendorQuotation(BuyingController):
 
 @frappe.whitelist()
 def make_purchase_order(source_name, target_doc=None):
+    def set_missing_values(source, target):
+        # This is where the magic happens:
+        # We manually link the PO back to the VQ, RFQ, and MR
+        target.vendor_quotation = source.name
+        target.request_for_quotations = source.request_for_quotations
+        target.material_requisition = source.material_requisition
     doclist = get_mapped_doc(
         "Vendor Quotation",
         source_name,
@@ -63,7 +69,8 @@ def make_purchase_order(source_name, target_doc=None):
                 }
             }
         },
-        target_doc
+        target_doc,
+        postprocess=set_missing_values
     )
     return doclist
 

@@ -34,6 +34,7 @@
   "status",
   "per_ordered",
   "column_break2",
+  "amended_from",
   "transfer_status",
   "per_received",
   "printing_details",
@@ -45,8 +46,8 @@
   "column_break_35",
   "work_order",
   "connections_tab",
-  "amended_from",
-  "purchase_orders"
+  "purchase_orders",
+  "request_for_quotations"
  ],
  "fields": [
   {
@@ -274,9 +275,17 @@
    "allow_on_submit": 1,
    "fieldname": "purchase_orders",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Purchase Order",
    "options": "Purchase Orders",
    "print_hide": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "request_for_quotations",
+   "fieldtype": "Link",
+   "label": "Request For Quotations",
+   "options": "Request For Quotations",
    "search_index": 1
   }
  ],
@@ -297,8 +306,8 @@
    "link_fieldname": "material_requisition"
   }
  ],
- "modified": "2026-06-18 00:16:54.474755",
- "modified_by": "admin@gmail.com",
+ "modified": "2026-06-18 23:30:54.464939",
+ "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Material Requisition",
  "naming_rule": "Expression (old style)",
