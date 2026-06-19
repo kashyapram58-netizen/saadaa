@@ -12,3 +12,12 @@ frappe.listview_settings['Purchase Orders'] = {
 		});
 	}
 };
+frappe.ui.form.on('Purchase Order', {
+	refresh: function (frm) {
+		// If your child table has data, pull the first requisition ID
+		if (frm.doc.linked_purchase_orders && frm.doc.linked_purchase_orders.length > 0) {
+			// Logic to set your Link field
+			frm.set_value('material_requisition', frm.doc.linked_purchase_orders[0].parent);
+		}
+	}
+});

@@ -17,6 +17,8 @@
   "transaction_date",
   "schedule_date",
   "buying_price_list",
+  "request_for_quotations",
+  "vendor_quotation",
   "warehouse_section",
   "scan_barcode",
   "last_scanned_warehouse",
@@ -25,6 +27,12 @@
   "set_warehouse",
   "items_section",
   "items",
+  "linked_po_section",
+  "linked_purchase_orders",
+  "connected_vq_section",
+  "linked_vendor_quotation",
+  "connected_rfq_section",
+  "linked_rfq_section",
   "terms_tab",
   "terms_section_break",
   "tc_name",
@@ -45,9 +53,7 @@
   "job_card",
   "column_break_35",
   "work_order",
-  "connections_tab",
-  "purchase_orders",
-  "request_for_quotations"
+  "connections_tab"
  ],
  "fields": [
   {
@@ -273,20 +279,53 @@
   },
   {
    "allow_on_submit": 1,
-   "fieldname": "purchase_orders",
-   "fieldtype": "Link",
-   "hidden": 1,
-   "label": "Purchase Order",
-   "options": "Purchase Orders",
-   "print_hide": 1,
-   "search_index": 1
-  },
-  {
    "fieldname": "request_for_quotations",
    "fieldtype": "Link",
    "label": "Request For Quotations",
    "options": "Request For Quotations",
    "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vendor_quotation",
+   "fieldtype": "Link",
+   "label": "Vendor Quotations",
+   "options": "Vendor Quotation",
+   "search_index": 1
+  },
+  {
+   "fieldname": "linked_po_section",
+   "fieldtype": "Section Break",
+   "label": "Linked PO"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "linked_purchase_orders",
+   "fieldtype": "Table",
+   "label": "Connected PO",
+   "options": "Purchase Order Reference"
+  },
+  {
+   "fieldname": "connected_vq_section",
+   "fieldtype": "Section Break",
+   "label": "Linked VQ"
+  },
+  {
+   "fieldname": "linked_vendor_quotation",
+   "fieldtype": "Table",
+   "label": "Connected VQ",
+   "options": "Vendor Quotation Reference"
+  },
+  {
+   "fieldname": "connected_rfq_section",
+   "fieldtype": "Section Break",
+   "label": "Linked RFQ"
+  },
+  {
+   "fieldname": "linked_rfq_section",
+   "fieldtype": "Table",
+   "label": "Connected RFQ",
+   "options": "Request For Quotations Reference"
   }
  ],
  "grid_page_length": 50,
@@ -306,7 +345,7 @@
    "link_fieldname": "material_requisition"
   }
  ],
- "modified": "2026-06-18 23:30:54.464939",
+ "modified": "2026-06-19 21:15:50.644295",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Material Requisition",

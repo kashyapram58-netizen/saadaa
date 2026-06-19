@@ -1,6 +1,11 @@
 {
- "charts": [],
- "content": "[{\"id\":\"brCLrv5Y0I\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Saadaa</b></span>\",\"col\":12}},{\"id\":\"rFAqyiLmx3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request Saadaa\",\"col\":3}},{\"id\":\"absd1JW6P6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"RFQs Saadaa\",\"col\":3}},{\"id\":\"1L5Y6-ibSb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vendor Quotation\",\"col\":3}},{\"id\":\"AlPy9x9zlG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Orders Saadaa\",\"col\":3}},{\"id\":\"JB0mUdRw44\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b></b></span>\",\"col\":12}},{\"id\":\"Mnkga5GNQp\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"kDr2pyA11F\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Website\",\"col\":12}}]",
+ "charts": [
+  {
+   "chart_name": "Saadaa",
+   "label": "Saadaa"
+  }
+ ],
+ "content": "[{\"id\":\"brCLrv5Y0I\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Saadaa</b></span>\",\"col\":12}},{\"id\":\"rFAqyiLmx3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Material Request Saadaa\",\"col\":3}},{\"id\":\"absd1JW6P6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"RFQs Saadaa\",\"col\":3}},{\"id\":\"1L5Y6-ibSb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Vendor Quotation\",\"col\":3}},{\"id\":\"AlPy9x9zlG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Orders Saadaa\",\"col\":3}},{\"id\":\"JB0mUdRw44\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b></b></span>\",\"col\":12}},{\"id\":\"Mnkga5GNQp\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"U0F_EQhje2\",\"type\":\"card\",\"data\":{\"card_name\":\"Vendor Quotation Comparison\",\"col\":4}},{\"id\":\"QSyn47P8fu\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Saadaa\",\"col\":12}},{\"id\":\"kDr2pyA11F\",\"type\":\"onboarding\",\"data\":{\"onboarding_name\":\"Website\",\"col\":12}}]",
  "creation": "2026-06-18 23:58:53.864639",
  "custom_blocks": [],
  "docstatus": 0,
@@ -52,9 +57,28 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Vendor Quotation Comparison",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Vendor Quotation Comparison",
+   "link_count": 0,
+   "link_to": "Vendor Quotation Comparison",
+   "link_type": "Report",
+   "onboard": 1,
+   "type": "Link"
   }
  ],
- "modified": "2026-06-19 00:45:45.040851",
+ "modified": "2026-06-19 20:54:07.485704",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Saadaa",

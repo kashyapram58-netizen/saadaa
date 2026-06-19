@@ -108,8 +108,8 @@ frappe.ui.form.on('Request For Quotations', {
                 }, __('Tools'));
 
                 // VIEW MENU: Add "Supplier Quotation Comparison"
-                frm.add_custom_button(__('Supplier Quotation Comparison'), function () {
-                    frappe.set_route('query-report', 'Supplier Quotation Comparison', {
+                frm.add_custom_button(__('Vendor Quotation Comparison'), function () {
+                    frappe.set_route('query-report', 'Vendor Quotation Comparison', {
                         'request_for_quotation': frm.doc.name
                     });
                 }, __('View'));
