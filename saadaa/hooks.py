@@ -138,9 +138,20 @@ app_license = "mit"
 # Hook on document methods and events
 
 doc_events = {
-    "Purchase Orders": { # Use singular if extending standard ERPNext
+    "Request For Quotations": {
+        "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.link_rfq_to_mr",
+        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_rfq_from_mr",
+        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_rfq_from_mr"
+    },
+    "Vendor Quotation": {
+        "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.link_vq_to_mr",
+        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_vq_from_mr",
+        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_vq_from_mr"
+    },
+    "Purchase Orders": {
         "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.link_po_to_mr",
-        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_po_from_mr"
+        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_po_from_mr",
+        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_po_from_mr"
     }
 }
 

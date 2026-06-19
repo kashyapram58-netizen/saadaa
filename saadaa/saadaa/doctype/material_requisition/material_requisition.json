@@ -311,6 +311,7 @@
    "label": "Linked VQ"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "linked_vendor_quotation",
    "fieldtype": "Table",
    "label": "Connected VQ",
@@ -322,6 +323,7 @@
    "label": "Linked RFQ"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "linked_rfq_section",
    "fieldtype": "Table",
    "label": "Connected RFQ",
@@ -345,7 +347,7 @@
    "link_fieldname": "material_requisition"
   }
  ],
- "modified": "2026-06-19 21:15:50.644295",
+ "modified": "2026-06-19 22:48:47.884866",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Material Requisition",
