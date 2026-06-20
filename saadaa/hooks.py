@@ -136,22 +136,24 @@ app_license = "mit"
 # Document Events
 # ---------------
 # Hook on document methods and events
-
 doc_events = {
+    "Purchase Orders": { 
+        "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs"
+    },
     "Request For Quotations": {
-        "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.link_rfq_to_mr",
-        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_rfq_from_mr",
-        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_rfq_from_mr"
+        "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs"
     },
     "Vendor Quotation": {
-        "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.link_vq_to_mr",
-        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_vq_from_mr",
-        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_vq_from_mr"
+        "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs"
     },
-    "Purchase Orders": {
-        "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.link_po_to_mr",
-        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_po_from_mr",
-        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.unlink_po_from_mr"
+    "Material Requisition": {
+        "before_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.before_cancel_override"
     }
 }
 

@@ -72,7 +72,7 @@ def get_data(filters):
 		query = query.where(sq_item.parent.isin(filters.get("vendor_quotation")))
 
 	if filters.get("request_for_quotations"):
-		query = query.where(sq_item.request_for_quotations == filters.get("vendor_for_quotation"))
+		query = query.where(sq_item.request_for_quotations == filters.get("request_for_quotations"))
 
 	if filters.get("supplier"):
 		query = query.where(sq.supplier.isin(filters.get("supplier")))
