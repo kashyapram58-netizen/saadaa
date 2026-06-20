@@ -73,7 +73,8 @@
   "dimension_col_break",
   "project",
   "section_break_44",
-  "page_break"
+  "page_break",
+  "request_for_quotations"
  ],
  "fields": [
   {
@@ -567,12 +568,18 @@
    "oldfieldname": "page_break",
    "oldfieldtype": "Check",
    "print_hide": 1
+  },
+  {
+   "fieldname": "request_for_quotations",
+   "fieldtype": "Link",
+   "label": "Request For Quotations",
+   "options": "Request For Quotations"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-06-16 21:54:15.427053",
+ "modified": "2026-06-19 20:43:11.090014",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Vendor Quotation Item",

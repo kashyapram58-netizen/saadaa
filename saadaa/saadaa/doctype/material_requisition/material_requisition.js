@@ -11,11 +11,11 @@ frappe.ui.form.on('Material Requisition', {
                 });
             }, __('Create'));
 
-            frm.add_custom_button(__('Purchase Order'), function () {
-                frappe.new_doc('Purchase Orders', {
-                    'material_requisition': frm.doc.name
-                });
-            }, __('Create'));
+            // frm.add_custom_button(__('Purchase Order'), function () {
+            //     frappe.new_doc('Purchase Orders', {
+            //         'material_requisition': frm.doc.name
+            //     });
+            // }, __('Create'));
         }
     },
 

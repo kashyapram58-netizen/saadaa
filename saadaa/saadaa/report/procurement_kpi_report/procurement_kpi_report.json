@@ -1,0 +1,33 @@
+{
+    "add_total_row": 1,
+    "columns": [],
+    "creation": "2026-06-20",
+    "docstatus": 0,
+    "doctype": "Report",
+    "filters": [
+        {
+            "fieldname": "company",
+            "fieldtype": "Link",
+            "label": "Company",
+            "options": "Company",
+            "default": "All"
+        },
+        {
+            "fieldname": "from_date",
+            "fieldtype": "Date",
+            "label": "From Date"
+        },
+        {
+            "fieldname": "to_date",
+            "fieldtype": "Date",
+            "label": "To Date"
+        }
+    ],
+    "is_standard": "Yes",
+    "modified": "2026-06-20",
+    "module": "Saadaa",
+    "name": "Procurement KPI Report",
+    "ref_doctype": "Material Requisition",
+    "report_name": "Procurement KPI Report",
+    "report_type": "Script Report"
+}

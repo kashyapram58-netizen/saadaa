@@ -34,7 +34,7 @@ def send_supplier_emails(rfq_name):
                 # Send email communication via Frappe background queue
                 frappe.sendmail(
                     recipients=supplier.email_id,
-                    subject=f"Request For Quotation: {rfq.name}",
+                    subject=f"Request For Quotations: {rfq.name}",
                     message=f"Dear {getattr(supplier, 'supplier_name', supplier.supplier)},\n\nPlease find attached our request for quotation. We look forward to your response.",
                     attachments=attachments,
                     reference_doctype="Request For Quotations",
@@ -43,3 +43,18 @@ def send_supplier_emails(rfq_name):
             except Exception as e:
                 frappe.log_error(title=_("RFQ Email Send Failure"), message=frappe.get_traceback())
                 frappe.throw(_("Failed to send email to {0}. Check Error Logs for details.").format(supplier.supplier))
+
+
+@frappe.whitelist()
+def make_vendor_quotation(source_name, target_doc=None):
+    # This maps the RFQ (source) to the VQ (target)
+    doc = get_mapped_doc("Request For Quotations", source_name, {
+        "Request For Quotations": {
+            "doctype": "Vendor Quotation",
+            "field_map": {
+                "name": "request_for_quotations", # Links RFQ Name to the VQ field
+                "material_requisition": "material_requisition" # Carries over the MR
+            }
+        }
+    }, target_doc)
+    return doc

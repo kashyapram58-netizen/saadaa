@@ -51,34 +51,30 @@ frappe.ui.form.on('Request For Quotations', {
         if (frm.doc.docstatus === 1) {
 
             // FIX: Allow "Vendor Quotation" creation on saved documents (Draft or Submitted)
+            // REPLACE your Vendor Quotation button block with this:
             frm.add_custom_button(__('Vendor Quotation'), function () {
-                // Pre-load the target Doctype structure to receive mapped child rows cleanly
-                // Inside your "Vendor Quotation" button logic in RFQ:
-                frappe.model.with_doctype('Vendor Quotation', function () {
-                    let target_doc = frappe.model.make_new_doc_and_get_name('Vendor Quotation');
-                    let new_vq = locals['Vendor Quotation'][target_doc];
+                // 1. Create a new Vendor Quotation
+                frappe.model.with_doctype('Vendor Quotation', () => {
+                    let new_vq = frappe.model.get_new_doc('Vendor Quotation');
 
-                    new_vq.request_for_quotation = frm.doc.name;
+                    // 2. Map Parent Fields
+                    new_vq.request_for_quotations = frm.doc.name; // Your specific field name
                     new_vq.company = frm.doc.company;
                     new_vq.material_requisition = frm.doc.material_requisition;
+                    new_vq.supplier = frm.doc.suppliers[0] ? frm.doc.suppliers[0].supplier : "";
 
+                    // 3. Map Child Table (Items)
                     if (frm.doc.items && frm.doc.items.length > 0) {
                         frm.doc.items.forEach(rfq_item => {
-                            // Use frappe.model.add_child and immediately populate 
-                            // without triggering auto-refresh logic
-                            let child_row = frappe.model.add_child(new_vq, 'Vendor Quotation Item', 'items');
-
-                            // Set fields directly. Use the 'true' parameter in set_value if possible, 
-                            // but for initial child creation, simple assignment is safer.
-                            frappe.model.set_value(child_row.doctype, child_row.name, 'item_code', rfq_item.item_code);
-                            frappe.model.set_value(child_row.doctype, child_row.name, 'uom', rfq_item.uom);
-                            frappe.model.set_value(child_row.doctype, child_row.name, 'qty', rfq_item.qty || rfq_item.quantity);
+                            let vq_item = frappe.model.add_child(new_vq, 'Vendor Quotation Item', 'items');
+                            vq_item.item_code = rfq_item.item_code;
+                            vq_item.qty = rfq_item.qty;
+                            vq_item.uom = rfq_item.uom;
                         });
                     }
 
-                    // Trigger a refresh only once at the very end
-                    cur_frm.refresh_fields('items');
-                    frappe.set_route('Form', 'Vendor Quotation', target_doc);
+                    // 4. Open the newly created document
+                    frappe.set_route('Form', 'Vendor Quotation', new_vq.name);
                 });
             }, __('Create'));
 
@@ -108,8 +104,8 @@ frappe.ui.form.on('Request For Quotations', {
                 }, __('Tools'));
 
                 // VIEW MENU: Add "Supplier Quotation Comparison"
-                frm.add_custom_button(__('Supplier Quotation Comparison'), function () {
-                    frappe.set_route('query-report', 'Supplier Quotation Comparison', {
+                frm.add_custom_button(__('Vendor Quotation Comparison'), function () {
+                    frappe.set_route('query-report', 'Vendor Quotation Comparison', {
                         'request_for_quotation': frm.doc.name
                     });
                 }, __('View'));

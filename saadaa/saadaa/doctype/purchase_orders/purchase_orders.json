@@ -3,7 +3,7 @@
  "allow_auto_repeat": 1,
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "format:PO-{YYYY}-{####}",
+ "autoname": "format:PUR-PO-{YYYY}-{####}",
  "creation": "2026-06-14 15:26:06.058279",
  "doctype": "DocType",
  "document_type": "Document",
@@ -1312,7 +1312,6 @@
    "allow_on_submit": 1,
    "fieldname": "vendor_quotation",
    "fieldtype": "Link",
-   "hidden": 1,
    "label": "Vendor Quotation",
    "no_copy": 1,
    "options": "Vendor Quotation",
@@ -1333,7 +1332,6 @@
    "allow_on_submit": 1,
    "fieldname": "request_for_quotations",
    "fieldtype": "Link",
-   "hidden": 1,
    "label": "Request For Quotations",
    "no_copy": 1,
    "options": "Request For Quotations",
@@ -1358,7 +1356,7 @@
    "link_fieldname": "purchase_orders"
   }
  ],
- "modified": "2026-06-18 22:04:03.288078",
+ "modified": "2026-06-20 15:47:19.546733",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Purchase Orders",

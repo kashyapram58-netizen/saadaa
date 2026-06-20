@@ -136,14 +136,26 @@ app_license = "mit"
 # Document Events
 # ---------------
 # Hook on document methods and events
-
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+    "Purchase Orders": { 
+        "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs"
+    },
+    "Request For Quotations": {
+        "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs"
+    },
+    "Vendor Quotation": {
+        "on_submit": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs",
+        "on_trash": "saadaa.saadaa.utils.auto_fetching_po_in_mr.run_all_syncs"
+    },
+    "Material Requisition": {
+        "before_cancel": "saadaa.saadaa.utils.auto_fetching_po_in_mr.before_cancel_override"
+    }
+}
 
 # Scheduled Tasks
 # ---------------

@@ -21,6 +21,9 @@
   "quotation_number",
   "has_unit_price_items",
   "amended_from",
+  "material_requisition",
+  "request_for_quotations",
+  "purchase_orders",
   "accounting_dimensions_section",
   "cost_center",
   "dimension_col_break",
@@ -117,9 +120,7 @@
   "is_subcontracted",
   "column_break_57",
   "opportunity",
-  "connections_tab",
-  "material_requisition",
-  "request_for_quotations"
+  "connections_tab"
  ],
  "fields": [
   {
@@ -924,9 +925,7 @@
    "allow_on_submit": 1,
    "fieldname": "material_requisition",
    "fieldtype": "Link",
-   "hidden": 1,
-   "ignore_user_permissions": 1,
-   "label": "Material Requisition",
+   "label": "Material Request",
    "options": "Material Requisition",
    "search_index": 1
   },
@@ -934,9 +933,7 @@
    "allow_on_submit": 1,
    "fieldname": "request_for_quotations",
    "fieldtype": "Link",
-   "hidden": 1,
-   "ignore_user_permissions": 1,
-   "label": "Request For Quotaion",
+   "label": "Request For Quotations",
    "options": "Request For Quotations",
    "search_index": 1
   },
@@ -950,6 +947,14 @@
    "oldfieldtype": "Date",
    "options": "Draft\nSubmitted\nRejected\nApproved\nRejected\nCancelled",
    "search_index": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "purchase_orders",
+   "fieldtype": "Link",
+   "label": "Purchase Orders",
+   "options": "Purchase Orders",
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
@@ -960,10 +965,18 @@
   {
    "link_doctype": "Purchase Orders",
    "link_fieldname": "vendor_quotation"
+  },
+  {
+   "link_doctype": "Request For Quotations",
+   "link_fieldname": "vendor_quotation"
+  },
+  {
+   "link_doctype": "Material Requisition",
+   "link_fieldname": "vendor_quotation"
   }
  ],
- "modified": "2026-06-17 23:30:05.128385",
- "modified_by": "admin@gmail.com",
+ "modified": "2026-06-19 15:33:04.449033",
+ "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Vendor Quotation",
  "naming_rule": "By \"Naming Series\" field",

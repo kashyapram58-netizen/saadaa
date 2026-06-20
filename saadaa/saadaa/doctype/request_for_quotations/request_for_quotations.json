@@ -16,6 +16,9 @@
   "transaction_date",
   "schedule_date",
   "status",
+  "material_requisition",
+  "purchase_orders",
+  "vendor_quotation",
   "suppliers_section",
   "suppliers",
   "items_section",
@@ -43,9 +46,7 @@
   "more_info",
   "opportunity",
   "amended_from",
-  "connections_tab",
-  "material_requisition",
-  "purchase_orders"
+  "connections_tab"
  ],
  "fields": [
   {
@@ -328,6 +329,7 @@
    "read_only": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "material_requisition",
    "fieldtype": "Link",
    "label": "Material Request",
@@ -345,6 +347,7 @@
    "search_index": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "purchase_orders",
    "fieldtype": "Link",
    "label": "Purchase Orders",
@@ -355,6 +358,14 @@
    "fieldname": "connections_tab",
    "fieldtype": "Tab Break",
    "label": "Connections"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vendor_quotation",
+   "fieldtype": "Link",
+   "label": "Vendor Quotation",
+   "options": "Vendor Quotation",
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
@@ -365,9 +376,17 @@
   {
    "link_doctype": "Material Requisition",
    "link_fieldname": "request_for_quotations"
+  },
+  {
+   "link_doctype": "Vendor Quotation",
+   "link_fieldname": "request_for_quotations"
+  },
+  {
+   "link_doctype": "Purchase Orders",
+   "link_fieldname": "request_for_quotations"
   }
  ],
- "modified": "2026-06-18 23:25:33.906429",
+ "modified": "2026-06-19 21:22:59.237942",
  "modified_by": "Administrator",
  "module": "Saadaa",
  "name": "Request For Quotations",
